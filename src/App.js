@@ -1,6 +1,8 @@
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import HeaderComponent from "./components/headerComponents/headerComponent";
 import "./App.css";
+import AboutUs from "./components/BodyComponent/AboutUs";
+import Portfolio from "./components/BodyComponent/Portfolio";
 
 const theme = createMuiTheme({
   breakpoints: {
@@ -18,7 +20,9 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <HeaderComponent />;
+      <HeaderComponent />
+      <AboutUs />
+      <Portfolio />
     </ThemeProvider>
   );
   // return "hello worlds";

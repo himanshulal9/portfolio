@@ -1,9 +1,9 @@
-import { Box, Container, Typography } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import React from "react";
 import { useStyles } from "./headerStyles";
 import Navbar from "./navbar";
-import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import Typed from "react-typed";
+import { DecoratorLabel } from "../aCommon/commonComponent";
 
 export default function HeaderComponent() {
   const classes = useStyles();
@@ -30,10 +30,7 @@ export default function HeaderComponent() {
             <br /> Based on your needs...
           </h3>
 
-          <Box className={classes.TitleWithDecorator}>
-            <Typography className={classes.decoratorText}> About me</Typography>
-            <ArrowDownwardIcon className={classes.arrow} />
-          </Box>
+          {DecoratorLabel({ label: "About Me", withIcon: true })}
         </Container>
       </div>
     </div>

@@ -18,7 +18,6 @@ export default function Navbar() {
   const navLinks = [
     { id: "About", label: "About" },
     { id: "Portfolio", label: "Portfolio" },
-    { id: "Services", label: "Services" },
     { id: "Contact", label: "Contact" },
   ];
   return (
@@ -42,7 +41,7 @@ export default function Navbar() {
             ))}
           </Scrollspy>
         </Box>
-        <Box component={Hidden} only={["sm", "md", "lg", "xl"]}>
+        <Box component={Hidden} xsUp>
           <IconButton color='inherit'>
             <MenuOpenRoundedIcon fontSize={"large"} />
           </IconButton>

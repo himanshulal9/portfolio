@@ -83,7 +83,6 @@ export const useStyles = makeStyles((theme) => ({
     position: "relative",
     fontSize: "16px",
     fontWeight: 700,
-    width: "75px",
     padding: "8px 0 8px 16px",
   },
   arrow: {
@@ -103,5 +102,12 @@ export const useStyles = makeStyles((theme) => ({
         paddingTop: "10px",
       },
     },
+  },
+
+  spanDivider: {
+    width: "63px",
+    height: "4px",
+    backgroundColor: Theme.colors.primary,
+    margin: theme.spacing(2, 0),
   },
 }));
