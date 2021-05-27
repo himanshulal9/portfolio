@@ -11,15 +11,19 @@ import {
 import { useStyles } from "./headerStyles";
 import { Link } from "react-scroll";
 import MenuOpenRoundedIcon from "@material-ui/icons/MenuOpenRounded";
+import { Theme } from "../Theme";
 
 export default function Navbar({ navLinks, handleDrawerOpen }) {
   const classes = useStyles();
 
   return (
-    <AppBar className={classes.navbar} position='fixed'>
+    <AppBar
+      className={classes.navbar}
+      position='fixed'
+      style={{ backgroundColor: Theme.colors.base1 }}>
       <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
         <Typography variant='h5' component='h6'>
-          `{"<GreatCoders />"}`
+          {"<GreatCoders />"}
         </Typography>
         <Box component={Hidden} only={["xs"]}>
           <Box>
