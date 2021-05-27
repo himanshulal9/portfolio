@@ -12,13 +12,9 @@ import { useStyles } from "./headerStyles";
 import { Link } from "react-scroll";
 import MenuOpenRoundedIcon from "@material-ui/icons/MenuOpenRounded";
 
-export default function Navbar() {
+export default function Navbar({ navLinks, handleDrawerOpen }) {
   const classes = useStyles();
-  const navLinks = [
-    { id: "About", label: "About" },
-    { id: "Portfolio", label: "Portfolio" },
-    { id: "Contact", label: "Contact" },
-  ];
+
   return (
     <AppBar className={classes.navbar} position='fixed'>
       <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
@@ -43,8 +39,13 @@ export default function Navbar() {
             ))}
           </Box>
         </Box>
-        <Box component={Hidden} xsUp>
-          <IconButton color='inherit'>
+        <Box component={Hidden} smUp>
+          <IconButton
+            color='inherit'
+            onClick={() => {
+              handleDrawerOpen();
+              console.log("handledrawer run ");
+            }}>
             <MenuOpenRoundedIcon fontSize={"large"} />
           </IconButton>
         </Box>

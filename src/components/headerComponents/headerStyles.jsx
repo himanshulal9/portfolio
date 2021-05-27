@@ -104,4 +104,11 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: Theme.colors.primary,
     margin: theme.spacing(2, 0),
   },
+
+  drawer: {
+    width: "250px",
+    height: "100vh",
+    background: Theme.colors.primary1,
+    color: Theme.colors.base2,
+  },
 }));
