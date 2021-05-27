@@ -9,8 +9,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { useStyles } from "./headerStyles";
-import Scrollspy from "react-scrollspy";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import MenuOpenRoundedIcon from "@material-ui/icons/MenuOpenRounded";
 
 export default function Navbar() {
@@ -21,25 +20,28 @@ export default function Navbar() {
     { id: "Contact", label: "Contact" },
   ];
   return (
-    <AppBar className={classes.navbar}>
-      <Toolbar component={Box} display='flex' justifyContent='space-between'>
+    <AppBar className={classes.navbar} position='fixed'>
+      <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
         <Typography variant='h5' component='h6'>
-          GreatCoders{" "}
+          `{"<GreatCoders />"}`
         </Typography>
         <Box component={Hidden} only={["xs"]}>
-          <Scrollspy
-            items={["About", "portfolio", "contact"]}
-            currentClassName='is-current'>
+          <Box>
             {navLinks.map((item, i) => (
               <Button
-                color='inherit'
                 key={i}
-                component={NavLink}
-                to={`#${item.label}`}>
+                activeClass='active'
+                to={`${item.id}`}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                color='inherit'
+                component={Link}>
                 {item.label}
               </Button>
             ))}
-          </Scrollspy>
+          </Box>
         </Box>
         <Box component={Hidden} xsUp>
           <IconButton color='inherit'>

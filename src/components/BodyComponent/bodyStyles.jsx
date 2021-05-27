@@ -63,4 +63,18 @@ export const useStyles = makeStyles((theme) => ({
       backgroundColor: Theme.colors.primary1,
     },
   },
+
+  // footer styles
+  footerContainer: {
+    padding: theme.spacing(2),
+    backgroundColor: Theme.colors.primary1,
+    color: Theme.colors.base2,
+    position: "relative",
+  },
+  arrowTop: {
+    position: "absolute",
+    top: "-25px",
+    right: "5px",
+    backgroundColor: "rgba(0,0,0,0.3)",
+  },
 }));

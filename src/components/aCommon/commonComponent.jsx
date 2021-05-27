@@ -1,18 +1,8 @@
 import React from "react";
-import {
-  Avatar,
-  Box,
-  Button,
-  Grid,
-  TextField,
-  Typography,
-  withStyles,
-} from "@material-ui/core";
-import PropTypes from "prop-types";
+import { Avatar, Box, Button, Grid, Typography } from "@material-ui/core";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import { useStyles } from "../headerComponents/headerStyles";
 import { useStyles as bodyStyles } from "../BodyComponent/bodyStyles";
-import { Theme } from "../Theme";
 
 export const DecoratorLabel = ({ label, withIcon, styles }) => {
   const classes = useStyles();

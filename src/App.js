@@ -4,6 +4,7 @@ import "./App.css";
 import AboutUs from "./components/BodyComponent/AboutUs";
 import Portfolio from "./components/BodyComponent/Portfolio";
 import ContactUs from "./components/BodyComponent/ContactUs";
+import Footer from "./components/BodyComponent/Footer";
 
 const theme = createMuiTheme({
   breakpoints: {
@@ -25,6 +26,7 @@ function App() {
       <AboutUs />
       <Portfolio />
       <ContactUs />
+      <Footer />
     </ThemeProvider>
   );
   // return "hello worlds";

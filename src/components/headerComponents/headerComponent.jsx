@@ -4,11 +4,12 @@ import { useStyles } from "./headerStyles";
 import Navbar from "./navbar";
 import Typed from "react-typed";
 import { DecoratorLabel } from "../aCommon/commonComponent";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function HeaderComponent() {
   const classes = useStyles();
   return (
-    <div className={classes.header}>
+    <div className={classes.header} id='header'>
       <div className={classes.headerWrapper}>
         <Navbar />
         <Container className={classes.displayContainer}>
@@ -18,9 +19,9 @@ export default function HeaderComponent() {
               strings={[
                 " Webdeveloper,",
                 " UI/UX Designer,",
-                " Graphic Designer,",
+                " Digital Expert,",
               ]}
-              typeSpeed={40}
+              typeSpeed={30}
               backSpeed={50}
               loop
             />

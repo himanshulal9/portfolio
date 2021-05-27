@@ -7,6 +7,7 @@ import WebIcon from "@material-ui/icons/Web";
 import BubbleChartIcon from "@material-ui/icons/BubbleChart";
 import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
 import AcUnitIcon from "@material-ui/icons/AcUnit";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function AboutUs() {
   const classes = useStyles();
@@ -36,41 +37,43 @@ export default function AboutUs() {
 
   return (
     <Box className={classes.section} id='About'>
-      <Container maxWidth='xl'>
-        <Grid container direction='row' spacing={2}>
-          <Grid item sm={12} md={5}>
-            <Box component={Hidden} smDown>
-              <img
-                src={aboutImage}
-                alt={"about"}
-                className={classes.responsiveImg}
-              />
-            </Box>
+      <ScrollAnimation animateIn='fadeIn'>
+        <Container maxWidth='xl'>
+          <Grid container direction='row' spacing={2}>
+            <Grid item sm={12} md={5}>
+              <Box component={Hidden} smDown>
+                <img
+                  src={aboutImage}
+                  alt={"about"}
+                  className={classes.responsiveImg}
+                />
+              </Box>
+            </Grid>
+            <Grid item sm={12} md={7}>
+              {RenderSectionHeading({
+                SmallText: "ABOUT US",
+                Title: "Hello I'm Himanshu lal",
+                Description:
+                  " A self taught developer who loves to codes something that wiil impact  majority of the people in good waay !",
+              })}
+              <br />
+              <Box className={classes.cardLists}>
+                <Grid container spacing={1}>
+                  {skills.map((item, i) => (
+                    <Grid key={i} item xs={6} style={{ margin: "10px 0px" }}>
+                      {CardMedia({
+                        Icon: item.icon,
+                        Title: item.title,
+                        Desc: item.desc,
+                      })}
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+            </Grid>
           </Grid>
-          <Grid item sm={12} md={7}>
-            {RenderSectionHeading({
-              SmallText: "ABOUT US",
-              Title: "Hello I'm Himanshu lal",
-              Description:
-                " A self taught developer who loves to codes something that wiil impact  majority of the people in good waay !",
-            })}
-            <br />
-            <Box className={classes.cardLists}>
-              <Grid container spacing={1}>
-                {skills.map((item, i) => (
-                  <Grid key={i} item xs={6} style={{ margin: "10px 0px" }}>
-                    {CardMedia({
-                      Icon: item.icon,
-                      Title: item.title,
-                      Desc: item.desc,
-                    })}
-                  </Grid>
-                ))}
-              </Grid>
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </ScrollAnimation>
     </Box>
   );
 }
