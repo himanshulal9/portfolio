@@ -3,6 +3,7 @@ import HeaderComponent from "./components/headerComponents/headerComponent";
 import "./App.css";
 import AboutUs from "./components/BodyComponent/AboutUs";
 import Portfolio from "./components/BodyComponent/Portfolio";
+import ContactUs from "./components/BodyComponent/ContactUs";
 
 const theme = createMuiTheme({
   breakpoints: {
@@ -23,6 +24,7 @@ function App() {
       <HeaderComponent />
       <AboutUs />
       <Portfolio />
+      <ContactUs />
     </ThemeProvider>
   );
   // return "hello worlds";

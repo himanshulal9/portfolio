@@ -53,4 +53,14 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "auto",
   },
+  gridItem: {
+    marginBottom: "20px",
+  },
+  submitButton: {
+    backgroundColor: Theme.colors.primary,
+    color: Theme.colors.base2,
+    "&:hover": {
+      backgroundColor: Theme.colors.primary1,
+    },
+  },
 }));

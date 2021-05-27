@@ -1,8 +1,18 @@
 import React from "react";
-import { Avatar, Box, Grid, Typography } from "@material-ui/core";
+import {
+  Avatar,
+  Box,
+  Button,
+  Grid,
+  TextField,
+  Typography,
+  withStyles,
+} from "@material-ui/core";
+import PropTypes from "prop-types";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import { useStyles } from "../headerComponents/headerStyles";
 import { useStyles as bodyStyles } from "../BodyComponent/bodyStyles";
+import { Theme } from "../Theme";
 
 export const DecoratorLabel = ({ label, withIcon, styles }) => {
   const classes = useStyles();
@@ -77,5 +87,18 @@ export const CardMedia = ({ Icon, Title, Desc }) => {
         </Typography>
       </Grid>
     </Grid>
+  );
+};
+
+export const RenderSubmitButton = ({ label }) => {
+  const classes = bodyStyles();
+  return (
+    <Button
+      type='submit'
+      variant='contained'
+      fullWidth={true}
+      className={classes.submitButton}>
+      {label}
+    </Button>
   );
 };
