@@ -16,12 +16,12 @@ export default function Portfolio() {
   const classes = useStyles();
 
   const portfolio = [
-    { url: Image1, icon: "", name: "# PortFolio 1" },
-    { url: Image2, icon: "", name: " # PortFolio 2" },
-    { url: Image3, icon: "", name: " # PortFolio 3" },
-    { url: Image4, icon: "", name: " # PortFolio 4" },
-    { url: Image5, icon: "", name: " # PortFolio 5" },
-    { url: Image6, icon: "", name: " # PortFolio 6" },
+    { url: Image1, name: "# PortFolio 1" },
+    { url: Image2, name: " # PortFolio 2" },
+    { url: Image3, name: " # PortFolio 3" },
+    { url: Image4, name: " # PortFolio 4" },
+    { url: Image5, name: " # PortFolio 5" },
+    { url: Image6, name: " # PortFolio 6" },
   ];
 
   return (
@@ -54,10 +54,10 @@ export default function Portfolio() {
                   className={classes.image}
                 />
                 <Box className={classes.imgOverlay}>
-                  <Typography variant='h5' component='h5' align='center'>
+                  <Typography variant='h5' className={classes.overlayText}>
                     {item.name}
                   </Typography>
-                  <Button variant='contained' style={{ margin: "10px 0px" }}>
+                  <Button variant='contained' className={classes.overlayBtn}>
                     Visit
                   </Button>
                 </Box>

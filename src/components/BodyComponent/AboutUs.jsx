@@ -60,7 +60,12 @@ export default function AboutUs() {
               <Box className={classes.cardLists}>
                 <Grid container spacing={1}>
                   {skills.map((item, i) => (
-                    <Grid key={i} item xs={6} style={{ margin: "10px 0px" }}>
+                    <Grid
+                      key={i}
+                      item
+                      xs={12}
+                      sm={6}
+                      style={{ margin: "10px 0px" }}>
                       {CardMedia({
                         Icon: item.icon,
                         Title: item.title,

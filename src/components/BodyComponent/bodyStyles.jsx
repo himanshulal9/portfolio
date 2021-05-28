@@ -26,7 +26,7 @@ export const useStyles = makeStyles((theme) => ({
     height: "45px",
   },
   imageContaienr: {
-    margin: theme.spacing(4, 0, 3, 0),
+    padding: theme.spacing(4, 0, 3, 0),
   },
 
   portFolioImageWrap: {
@@ -48,11 +48,30 @@ export const useStyles = makeStyles((theme) => ({
     flexFlow: "column",
     justifyContent: "center",
     alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      height: "85%",
+    },
+  },
+  overlayText: {
+    fontSize: "2em",
+    textAlign: "center",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1em",
+    },
+  },
+  overlayBtn: {
+    marginTop: theme.spacing(2),
+    "&:hover": {
+      marginTop: theme.spacing(2),
+      backgroundColor: Theme.colors.primary1,
+      color: Theme.colors.base2,
+    },
   },
   image: {
     width: "100%",
     height: "auto",
   },
+
   gridItem: {
     marginBottom: "20px",
   },
