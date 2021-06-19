@@ -20,7 +20,7 @@ export default function DrawerComponent({
     <Drawer
       anchor='left'
       variant='temporary'
-      classes={{ root: classes.drawer }}
+      classes={{ paper: classes.drawer }}
       open={initialState}
       onClose={handleDrawerOpen}
       ModalProps={{

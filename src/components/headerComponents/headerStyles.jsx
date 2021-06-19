@@ -108,7 +108,7 @@ export const useStyles = makeStyles((theme) => ({
   drawer: {
     width: "250px",
     height: "100vh",
-    background: Theme.colors.primary1,
+    backgroundColor: `${Theme.colors.primary1} !important`,
     color: Theme.colors.base2,
   },
 }));
