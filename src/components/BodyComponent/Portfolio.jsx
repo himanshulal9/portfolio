@@ -16,7 +16,7 @@ export default function Portfolio() {
   const classes = useStyles();
 
   const portfolio = [
-    { url: Image1, name: "# PortFolio 1" },
+    { url: Image1, name: " # PortFolio 1" },
     { url: Image2, name: " # PortFolio 2" },
     { url: Image3, name: " # PortFolio 3" },
     { url: Image4, name: " # PortFolio 4" },
